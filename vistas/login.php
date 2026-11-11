@@ -9,11 +9,10 @@
 <body>
     <header class="encabezado">
         <div class="contenedor fila-entre">
-            <h1>Acceso al Sistema Departamental</h1>
-            <a href="index.php" class="boton boton-blanco">Volver al Inicio</a>
+    <h1>Acceso al Sistema Departamental</h1>
+    <a href="index.php" class="boton boton-blanco">Volver al Inicio</a>
         </div>
     </header>
-
     <main class="contenedor grilla-dos">
         <section class="tarjeta-oferta">
             <h2>Iniciar Sesión</h2>
@@ -22,11 +21,8 @@
                 <div class="alerta-error"><?= $mensaje_error ?></div>
             <?php endif; ?>
             <form method="POST" action="index.php?accion=ingresar" class="formulario">
-                <label>Correo Electrónico:</label>
-                <input type="email" name="correo" required>
-                <label>Contraseña:</label>
-                <input type="password" name="clave" required>
-                <button type="submit" class="boton boton-rojo">Ingresar</button>
+     <label>Correo Electrónico:</label> <input type="email" name="correo" required> <label>Contraseña:</label>
+    <input type="password" name="clave" required>  <button type="submit" class="boton boton-rojo">Ingresar</button>
             </form>
         </section>
 

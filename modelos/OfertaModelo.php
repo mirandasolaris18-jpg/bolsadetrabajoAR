@@ -20,14 +20,11 @@ class OfertaModelo {
             $parametros[':busqueda'] = "%$busqueda%";
         }
         if (!empty($municipio)) {
-            $sql .= " AND o.municipio = :municipio";
-            $parametros[':municipio'] = $municipio;
+            $sql .= " AND o.municipio = :municipio";            $parametros[':municipio'] = $municipio;
         }
 
-        $sql .= " ORDER BY o.fecha_publicacion DESC";
-        $consulta = $this->bd->prepare($sql);
-        $consulta->execute($parametros);
-        return $consulta->fetchAll();
+        $sql .= " ORDER BY o.fecha_publicacion DESC"; $consulta = $this->bd->prepare($sql);
+        $consulta->execute($parametros);        return $consulta->fetchAll();
     }
 
     public function crearOferta($id_empresa, $titulo, $descripcion, $municipio, $salario, $modalidad) {
